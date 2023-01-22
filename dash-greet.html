@@ -8,7 +8,6 @@
         font-size: 18pt;
         color: #FF5C8D;
         padding: 5px;
-        border: 0px;
         justify-content: left;
         line-height: 1.5;
         height:85%;
@@ -55,7 +54,10 @@
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
     
-    var time = `${hours[today.getHours()]}:${minutes[today.getMinutes()]}:${seconds[today.getSeconds()]}`;
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var time = `${hours} : ${minutes} : ${seconds}`;
 
     var greet;
 
