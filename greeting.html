@@ -10,8 +10,8 @@
         padding: 2px;
         align-items: center;
         justify-content: center;
-        line-height: normal;
-        height:95%;
+        line-height: 0.5;
+        height:100%;
         font-weight: bold;
         flex-direction: row;
       }
@@ -27,8 +27,6 @@
 </head>
 
 <body onload="startTime()">
-
-
 <div id="txt"></div>
 
 <script>
@@ -50,7 +48,7 @@ var weekday = new Array(7);
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
     
-        var greet;
+    var greet;
     if (hrs < 12)
         greet = 'good morning.  ';
     else if (hrs >= 12 && hrs <= 17)
