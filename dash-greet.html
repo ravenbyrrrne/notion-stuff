@@ -1,8 +1,6 @@
-<html> 
-<head>
-    <title>Date Widget for Notion</title> 
+<title>Date Widget for Notion</title> 
     <style>
-      #lbl {
+      #txt {
         display: flex;
         font-family: sans-serif;
         font-size: 18pt;
@@ -30,62 +28,3 @@
           background-color: rgba(0, 0, 0, 0);
       }
     </style>
-</head>
-<body>
-    <div id="lbl"></div>
-</body>
-
-<script>
-    
-    var weekday = new Array(7);
-    weekday[0] = "sunday";
-    weekday[1] = "monday";
-    weekday[2] = "tuesday";
-    weekday[3] = "wednesday";
-    weekday[4] = "thursday";
-    weekday[5] = "friday";
-    weekday[6] = "saturday";
-
-    const monthNames = ["january", "february", "march", "april", "may", "june",
-      "july", "august", "september", "october", "november", "december"
-    ];
-
-    var today = new Date();
-    var hrs = today.getHours();
-    var dayOfWeek = weekday[today.getDay()];
-    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
-    
-    var hh = today.getHours();
-        if(hh <10 )
-           hh = '0'+ hh;
-        else hh
-    var mm = today.getMinutes();
-        if(mm <10 )
-           mm = '0' + mm;
-        else mm
-    var ss = today.getSeconds();
-        if(ss <10)
-           ss = '0' + ss;
-        else mm
-        
-    
-    var time = `${hh}:${mm}:${ss}`;
-    
-    var greet;
-    if (hrs < 12)
-        greet = 'good morning.  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'good afternoon. ';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'good evening.  ';
-
-    
-  document.getElementById('lbl').innerHTML = `
-        <div class="container">
-          <div id="date"> ${greet} it is currently ${date} at ${time}</div>
-        <div/>
-    `;
-    
-    
-</script> 
-</html>
