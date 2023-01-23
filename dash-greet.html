@@ -53,18 +53,27 @@
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
+    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
    
-    function showTime();
     var time = new Date();
     var hh = today.getHours();
     var mm = today.getMinutes();
     var ss = today.getSeconds();
+    var timeout = setInterval(time, 1000);
+    
     var time = `${hh}:${mm}:${ss}`;
     
-    hh = (hh < 10) ? "0" + hh : hh;
-    mm = (mm < 10) ? "0" + mm : mm;
-    ss = (ss < 10) ? "0" + ss : ss;
+    if (hh < 10)
+        hh = "0" + hh;
+        else hh;
+    if (mm < 10)
+        mm = "0" + mm;
+        else mm;
+    if (ss < 10)
+        ss = "0" + ss;
+        else ss;
+    
+
 
     var greet;
 
@@ -80,10 +89,7 @@
           <div id="date"> ${greet} it is currently ${date} at ${time}</div>
         <div/>
     `;
-    
-    document.getElementById("lbl").textContent = time;
     setTimeout(showTime, 1000);
-    }
     
 </script> 
 </html>
