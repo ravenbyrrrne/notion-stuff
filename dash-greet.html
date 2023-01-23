@@ -52,9 +52,9 @@
     
     var today = new Date();
     var hrs = today.getHours();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
+    var hh = today.getHours();
+    var mm = today.getMinutes();
+    var ss = today.getSeconds();
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
 
@@ -67,23 +67,6 @@
     else if (hrs >= 17 && hrs <= 24)
         greet = 'good evening,  ';
     
-    var hh;
-    if (h < 10)
-        hh = '0'h;
-    else if (h >= 10)
-        hh = h;
-    
-    var mm;
-    if (m < 10)
-        mm = '0'm;
-    else if (m >= 10)
-        mm = m;
-    
-    var ss;
-    if (s < 10)
-        ss = '0's;
-    else if (s >= 10)
-        ss = s;
 
 
     document.getElementById('lbl').innerHTML = `
