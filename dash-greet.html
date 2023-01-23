@@ -59,10 +59,6 @@
     var mm = today.getMinutes();
     var ss = today.getSeconds();
     var time = `${hh}:${mm}:${ss}`;
-    
-    hh = (h < 10) ? "0" + h : h;
-    mm = (m < 10) ? "0" + m : m;
-    ss = (s < 10) ? "0" + s : s;
 
     var greet;
 
@@ -72,13 +68,13 @@
         greet = 'good afternoon, ';
     else if (hrs >= 17 && hrs <= 24)
         greet = 'good evening,  ';
-    
-    setTimeout(time, 1000);
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
           <div id="date"> ${greet} it is currently ${date} at ${time}.</div>
         <div/>
     `;
+    
+    setTimeout(time, 1000);
 </script> 
 </html>
