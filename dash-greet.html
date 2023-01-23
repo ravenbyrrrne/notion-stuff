@@ -36,23 +36,6 @@
 </body>
 
 <script>
-    function gettime() {
-    var time= new Date();
-    var hr = date.getHours();
-    var m = date.getMinutes();
-    var s = date.getSeconds();
-    if(m < 10)
-    {
-        m = "0" + m
-    }
-    if(s < 10)
-    {
-        s = "0" + s
-    }
-    document.clockform.clock.value = hr + ":" + m + ":" + s;
-    setTimeout("gettime()",100)
-}
-    
     var weekday = new Array(7);
     weekday[0] = "sunday";
     weekday[1] = "monday";
@@ -81,6 +64,13 @@
         greet = 'good afternoon, ';
     else if (hrs >= 17 && hrs <= 24)
         greet = 'good evening,  ';
+    
+    
+    var refresh=1000;
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var time = `${h}:${m}:${s}`;
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
