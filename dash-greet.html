@@ -56,11 +56,17 @@
     var today = new Date();
     var hrs = today.getHours();
     var hh = today.getHours();
-        if(hh <10 ){hh='0'+ hh;}
+        if(hh <10 )
+           hh = '0'+ hh;
+        else hh
     var mm = today.getMinutes();
-        if(mm <10 ){mm='0' + minute;}
+        if(mm <10 )
+           mm = '0' + mm;
+        else mm
     var ss = today.getSeconds();
-        if(ss <10){ss='0' + second;}
+        if(ss <10)
+           ss = '0' + ss;
+        else mm
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
 
