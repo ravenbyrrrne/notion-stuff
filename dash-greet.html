@@ -36,6 +36,23 @@
 </body>
 
 <script>
+    function gettime() {
+    var time= new Date();
+    var hr = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+    if(m < 10)
+    {
+        m = "0" + m
+    }
+    if(s < 10)
+    {
+        s = "0" + s
+    }
+    document.clockform.clock.value = hr + ":" + m + ":" + s;
+    setTimeout("gettime()",100)
+}
+    
     var weekday = new Array(7);
     weekday[0] = "sunday";
     weekday[1] = "monday";
@@ -54,25 +71,6 @@
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
-   
-    var time = new Date();
-    var hh = today.getHours();
-    var mm = today.getMinutes();
-    var ss = today.getSeconds();
-    var timeout = setInterval(time, 1000);
-    
-    var time = `${hh}:${mm}:${ss}`;
-    
-    if (hh < 10)
-        hh = "0" + hh;
-        else hh;
-    if (mm < 10)
-        mm = "0" + mm;
-        else mm;
-    if (ss < 10)
-        ss = "0" + ss;
-        else ss;
-    
 
 
     var greet;
@@ -89,7 +87,6 @@
           <div id="date"> ${greet} it is currently ${date} at ${time}</div>
         <div/>
     `;
-    setTimeout(showTime, 1000);
     
 </script> 
 </html>
