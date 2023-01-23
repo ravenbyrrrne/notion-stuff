@@ -52,7 +52,7 @@
       "july", "august", "september", "october", "november", "december"
     ];
 
-    
+    function startTime() {
     var today = new Date();
     var hrs = today.getHours();
     var hh = today.getHours();
@@ -73,11 +73,11 @@
 
     var greet;
     if (hrs < 12)
-        greet = 'good morning,  ';
+        greet = 'good morning.  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'good afternoon, ';
+        greet = 'good afternoon. ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'good evening,  ';
+        greet = 'good evening.  ';
     
 
 
@@ -86,6 +86,7 @@
           <div id="date"> ${greet} it is currently ${date} at ${hh}:${mm}:${ss}</div>
         <div/>
     `;
+    setTimeout(startTime, 1000);
     
 </script> 
 </html>
