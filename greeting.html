@@ -9,7 +9,7 @@
         color: #FF5C8D;
         padding: 5px;
         border: 1px solid rgba(0, 0, 0, 0);
-        justify-content: left;
+        justify-content: center;
         line-height: 1.5;
         height:85%;
         font-weight: bold;
@@ -68,7 +68,6 @@ function startTime() {
   document.getElementById('txt').innerHTML =  `${greet}it is currently ${date} at ${h}:${m}:${s}`;
   setTimeout(startTime, 1000);
 }
-
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
