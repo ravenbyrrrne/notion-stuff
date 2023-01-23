@@ -5,7 +5,7 @@
       #txt {
         display: flex;
         font-family: monospace;
-        font-size: 18pt;
+        font-size: 16pt;
         color: #d15796;
         padding: 2px;
         align-items: center;
@@ -15,6 +15,21 @@
         font-weight: bold;
         flex-direction: column;
       }
+        
+       #calendar {
+        display: flex;
+        font-family: monospace;
+        font-size: 22pt;
+        color: #d15796;
+        padding: 2px;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+        height: 100%;
+        font-weight: bold;
+        flex-direction: column;
+      }
+      
       #container {
         display: flex;
         align-items: center;
@@ -64,8 +79,8 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('txt').innerHTML = `
-  <div>${greet}it is currently</div>
-  <div> ${date} at ${h}:${m}:${s}</div>`;
+  <div>♡ ${greet}it is currently: ♡</div>
+  <div id="calendar"> ${date} at ${h}:${m}:${s}</div>`;
   setTimeout(startTime, 1000);
 }
 function checkTime(i) {
