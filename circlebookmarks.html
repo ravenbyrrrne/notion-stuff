@@ -32,7 +32,7 @@
     }
 
     .social {
-      background-color: #eae9e9;
+      background-color: #d15796;
       width: 55px;
       height: 55px;
       border-radius: 50%;
@@ -82,6 +82,10 @@
     }
 
     .ko-fi:hover {
+      background-color: #2AABEE;
+    }
+    
+    .photos:hover {
       background-color: #2AABEE;
     }
 
@@ -173,6 +177,13 @@
         <span class="icon telegram"><i class="fab fa-mug-saucer"></i></span>
       </div>
       <!-- End ko-fi Icon -->
+      
+      
+      <!-- Start photos Icon -->
+      <div id="photos" onclick="navigate(this.id)" class="social photos">
+        <span class="icon photos"><i class="fab fa-mug-image"></i></span>
+      </div>
+      <!-- End ko-fi Icon -->
 
     </div>
 
@@ -215,7 +226,12 @@
         else if (id === "ko-fi") {
           window.open("https://ko-fi.com/drawnbyraven", '_blank').focus();
         }
+        }
+        else if (id === "photos") {
+          window.open("https://photos.google.com/u/0/", '_blank').focus();
+        }        
       }
+
 
     </script>
 
