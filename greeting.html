@@ -5,7 +5,7 @@
       #txt {
         display: flex;
         font-family: monospace;
-        font-size: 12pt;
+        font-size: 1em;
         color: #d15796;
         padding: 2px;
         align-items: center;
@@ -19,7 +19,7 @@
        #calendar {
         display: flex;
         font-family: monospace;
-        font-size: 18pt;
+        font-size: 1.25em;
         color: #d15796;
         padding: 2px;
         align-items: center;
@@ -65,11 +65,11 @@ var weekday = new Array(7);
     
     var greet;
     if (hrs < 12)
-        greet = 'good morning, raven.  ';
+        greet = 'good morning, ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'good afternoon, raven. ';
+        greet = 'good afternoon, ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'good evening, raven.  ';
+        greet = 'good evening, ';
         
 function startTime() {
   const today = new Date();
