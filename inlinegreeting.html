@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
- <title>Greeting</title> 
+ <title>Inline Greeting</title> 
     <style>
     
 /* CALENDAR */
       #txt {
         display: flex;
         font-family: monospace;
-        font-size: 1.5em;
+        font-size: 16px;
         color: #d15796;
-        padding: 2px;
+        background-color: #FAF1F5;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
         align-items: center;
         justify-content: center;
-        line-height: normal;
+        line-height: small;
         height: 100%;
         font-weight: bold;
         flex-direction: column;
@@ -47,8 +50,8 @@
     }
 
     .social {
-      width: 47px;
-      height: 47px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       display: grid;
       place-items: center;
@@ -58,7 +61,7 @@
     }
 
     .icon {
-      width: 1.2em;
+      width: 1.1em;
       align: center;
     }
 
@@ -68,6 +71,8 @@
     </style>
 </head>
 
+
+<!--CALENDAR-->
 <body onload="startTime()">
 <div id="txt"></div>
 
@@ -106,7 +111,7 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('txt').innerHTML = `
-  <div>${greet}今日は${date}です。${h}時${m}分${s}秒です。</div>`;
+  <div>⋆୨♡୧⋆ ${greet}今日は${date}です。${h}時${m}分${s}秒です。⋆୨♡୧⋆</div>`;
   setTimeout(startTime, 1000);
 }
 function checkTime(i) {
